@@ -11,3 +11,9 @@ pnpm run dev
 ```bash
 pnpm run cypress:ct
 ```
+
+## API
+
+<https://hiring.dev.youtility.co.uk/swagger/index.html>
+
+<https://hiring.dev.youtility.co.uk/libraries>
