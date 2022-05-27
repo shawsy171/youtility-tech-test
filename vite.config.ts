@@ -1,5 +1,7 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
+const path = require('path')
+const root = __dirname;
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -8,7 +10,7 @@ export default defineConfig({
   },
   resolve: {
     alias: {
-      '@services': './src/services'
+      '@services': path.resolve(__dirname, './src/services')
     }, 
   },
   plugins: [react()]

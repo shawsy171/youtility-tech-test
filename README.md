@@ -17,3 +17,10 @@ pnpm run cypress:ct
 <https://hiring.dev.youtility.co.uk/swagger/index.html>
 
 <https://hiring.dev.youtility.co.uk/libraries>
+
+## Tech Stack
+
+- Vite <https://vitejs.dev/>
+- Tailwindcss <https://tailwindcss.com/>
+- Cypress <https://www.cypress.io/>
+- pnpm <https://pnpm.io/>

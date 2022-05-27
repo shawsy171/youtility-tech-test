@@ -1,4 +1,3 @@
-// axios instance
 import axios from "axios";
 
 const baseURL = 'https://hiring.dev.youtility.co.uk'
