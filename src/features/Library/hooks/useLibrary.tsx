@@ -1,24 +1,25 @@
 import { useState } from 'react';
 import { createLibrary } from '../services/api';
-import { Library } from '../types'
+import { ILibrary } from '../types'
 
 const useCreateLibrary = () => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
-  const [data, setData] = useState<Library[]>([]);
+  const [data, setData] = useState<ILibrary[]>([]);
+  const [currentLib, setCurrentLib] = useState('');
 
   const create = async () => {
     setLoading(true);
     try {
       const library = await createLibrary();
-      setData((prev: Library[]) => [...prev, library]);
+      setData((prev: ILibrary[]) => [...prev, library]);
     } catch (err) {
       setError(true);
     }
     setLoading(false);
   };
 
-  return { loading, error, data, create };
+  return { loading, error, data, create, currentLib, setCurrentLib };
 }
 
 export default useCreateLibrary

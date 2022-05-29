@@ -1,18 +1,19 @@
-interface ListProps {
-  items: any[];
+
+interface ListProps<T> {
+  items: T[]
+  children: (item: T, index?: number) => React.ReactNode
+}
+interface IdObj {
+  id: string | number
 }
 
-const List = ({ items }: ListProps) => {
+const List = <T extends IdObj>({ items, children }: ListProps<T>) => {
   return (
-    <>
-      <ul className="divide-y divide-gray-100">
-        {items.map((item: any, index) => (
-          <li key={item.id}>
-            <span>Library {index+1}:  </span><button className="p-3 hover:bg-blue-600 hover:text-blue-200">{item.id}</button>
-          </li>
-        ))}
-      </ul>
-    </>
+    <ul className="">
+      {items.map((item, index) => (
+        <li key={item.id}>{children(item, index)}</li>
+      ))}
+    </ul>
   )
 }
 

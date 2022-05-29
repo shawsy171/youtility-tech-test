@@ -1,3 +1,3 @@
-export interface Library {
+export interface ILibrary {
   id: string;
 }

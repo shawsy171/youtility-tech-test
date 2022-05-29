@@ -1,8 +1,10 @@
 import { youtilityAPI } from '@services/api'
-import { Library } from '../types';
+import { ILibrary } from '../types';
 
-export const createLibrary = async (): Promise<Library> => {
-  const response = await youtilityAPI.post('libraries');
+export const createLibrary = async (): Promise<ILibrary> => {
+  const response = await youtilityAPI.post('libraries', {
+    headers: { 'accept': 'text/plain' }
+  });
 
   // console.log(response)
 

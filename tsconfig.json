@@ -19,6 +19,9 @@
       "@services/*": [
         "./src/services/*"
       ],
+      "@components/*": [
+        "./src/components/*"
+      ],
     }
   },
   "include": ["src"],
