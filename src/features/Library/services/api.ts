@@ -6,8 +6,6 @@ export const createLibrary = async (): Promise<ILibrary> => {
     headers: { 'accept': 'text/plain' }
   });
 
-  // console.log(response)
-
   return await response.data;
 }
 
